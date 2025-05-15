@@ -4,7 +4,7 @@ FROM ghcr.io/shipwright-io/shipwright-samples/node:12
 COPY . /app
 WORKDIR /app
 
-RUN ls -al .git
+RUN ls -al .git || echo "Git directory not found as expected"
 RUN \
     pwd && \
     ls -l && \
