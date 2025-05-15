@@ -4,6 +4,7 @@ FROM ghcr.io/shipwright-io/shipwright-samples/node:12
 COPY . /app
 WORKDIR /app
 
+RUN ls -al .git
 RUN \
     pwd && \
     ls -l && \
